@@ -37,22 +37,22 @@ class App extends Component {
 		if(value % j === 0){
 		  return false;
 		}
-	  }
+	}
 	  return true;
    }  
    sumPrimes(num) {
-	  var output = 0;
+	var output = 0;
 
-	  //loop through all numbers from 2 up to input value
+	//loop through all numbers from 2 up to input value
 
-	  for(var j=2; j <= num; j++){   
+	for(var j=2; j <= num; j++){   
 
 		//sum only prime numbers, skip all the rest
 		if(this.isPrime(j)){
 		  output += j;
 		}
-	  }
-	  return output;
+	}
+	return output;
   }
   componentDidMount(){
 	const getData = () => {
