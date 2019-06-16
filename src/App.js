@@ -18,27 +18,29 @@ class App extends Component {
     }
   }
   handleChartHover(hoverLoc, activePoint){
-    this.setState({
-      hoverLoc: hoverLoc,
-      activePoint: activePoint
-    })
+	this.setState({
+	hoverLoc: hoverLoc,
+	activePoint: activePoint
+	})
   }
+  
   handleChange = (e) => {
-        this.setState({
-            [e.target.number_of_months]: e.target.value
+	this.setState({
+		[e.target.number_of_months]: e.target.value
 			
-        })
-    }
-	isPrime(value){
-	  //test if number is prime
-	  for(var j=2; j < value; j++){
+	})
+  }
+ 
+  isPrime(value){
+    //test if number is prime
+    for(var j=2; j < value; j++){
 		if(value % j === 0){
 		  return false;
 		}
 	  }
 	  return true;
-	}
-	sumPrimes(num) {
+   }  
+   sumPrimes(num) {
 	  var output = 0;
 
 	  //loop through all numbers from 2 up to input value
@@ -51,7 +53,7 @@ class App extends Component {
 		}
 	  }
 	  return output;
-	}
+  }
   componentDidMount(){
 	const getData = () => {
 	  var query = window.location.search.substring();
@@ -86,13 +88,13 @@ class App extends Component {
               y: bitcoinData.bpi[date] // numerical price
             });
             count++;
-		//if is prime number on that day console log/alert the results
-		if (this.isPrime(this.sumPrimes(bitcoinData.bpi[date]))==true){
-			//console data
-			console.log("Date: ",date," Bitcoin Price: ",this.sumPrimes(bitcoinData.bpi[date])," Is Prime Result:",this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
-			//alert data
-			alert("Date: "+date+" Bitcoin Price: "+this.sumPrimes(bitcoinData.bpi[date])+" Is Prime Result: "+this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
-		}
+			//if is prime number on that day console log/alert the results
+			if (this.isPrime(this.sumPrimes(bitcoinData.bpi[date]))==true){
+				//console data
+				console.log("Date: ",date," Bitcoin Price: ",this.sumPrimes(bitcoinData.bpi[date])," Is Prime Result:",this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
+				//alert data
+				alert("Date: "+date+" Bitcoin Price: "+this.sumPrimes(bitcoinData.bpi[date])+" Is Prime Result: "+this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
+			}
 		  
 
           }
