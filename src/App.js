@@ -28,10 +28,6 @@ class App extends Component {
             [e.target.number_of_months]: e.target.value
 			
         })
-		console.log("===");
-    }
-	saySomething(something) {
-        console.log(something);
     }
 	isPrime(value){
 	  //test if number is prime
@@ -47,11 +43,11 @@ class App extends Component {
 
 	  //loop through all numbers from 2 up to input value
 
-	  for(var i=2; i <= num; i++){   
+	  for(var j=2; j <= num; j++){   
 
 		//sum only prime numbers, skip all the rest
-		if(this.isPrime(i)){
-		  output += i;
+		if(this.isPrime(j)){
+		  output += j;
 		}
 	  }
 	  return output;
@@ -75,7 +71,7 @@ class App extends Component {
 	  }
 	  
 	  let end_date =moment().format('YYYY-MM-DD');
-	  this.saySomething("Hello");
+	 
       const url = 'https://api.coindesk.com/v1/bpi/historical/close.json?start='+start_date+'&end='+end_date;
 
       fetch(url).then( r => r.json())
@@ -95,7 +91,7 @@ class App extends Component {
 			//console data
 			console.log("Date: ",date," Bitcoin Price: ",this.sumPrimes(bitcoinData.bpi[date])," Is Prime Result:",this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
 			//alert data
-			//alert("Date: "+date+" Bitcoin Price: "+this.sumPrimes(bitcoinData.bpi[date])+" Is Prime Result: "+this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
+			alert("Date: "+date+" Bitcoin Price: "+this.sumPrimes(bitcoinData.bpi[date])+" Is Prime Result: "+this.isPrime(this.sumPrimes(bitcoinData.bpi[date])));
 		}
 		  
 
