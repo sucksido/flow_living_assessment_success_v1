@@ -69,4 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Install moment package for handling dates
 
-###npm install --save moment react-moment
+### `npm install --save moment react-moment`
