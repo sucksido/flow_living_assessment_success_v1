@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-### NB: Buyit in React JS and Node JS, all logic is in src/App.js
+### NB: Built in React JS and Node JS, all logic is in src/App.js
 ## Available Scripts
 
 In the project directory, you can run:
